@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="/static/css/estilos.css" type="text/css">  
+</head>
+<body>
+    <div id="contenedor">
+    <header>
+        <h1>Bienvenid@ <strong>{{ username }}</strong> a "FRASES"</h1>
+        <p><span>PAGINA PARA CONCER FRASES</span></p>
+    </header>
+    <nav class="navegacion">
+        {%if username %}
+        <ul>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/busqueda">Buscar</a></li>
+            <li><a href="/frasesfav">Frases favoritas</a></li>
+            <li><a href="/modificar">Modificar Cuenta</a></li>
+        </ul>
+        {%else %}
+        <ul>
+            <li><a href="/login">login</a></li>
+            <li><a href="/register">Registrar</a></li>    
+        </ul>
+        {%endif %}
+    </nav>
+    <main>
+        <section>
+            <article><h2>HOLA!!!</h2>
+                <p>Para poder ver frases y seleccionar tus frases favortias, ocupas <strong id="dato">[LOGEARTE]</strong>, en caso de no tener cuenta puedes crear una en <strong id="dato">[REGISTRAR],</strong> </p>
+            <p></p>
+            <p></p>
+            </article>
+            <article>
+                <h2>FRASES CELEBRES</h2>
+                <p>A continuacion unas de las frases de nuestro catalogo</p>
+                <p><strong>Frase: </strong><br>Todos esos momentos se perderán en el tiempo, como lágrimas en la lluvia.<br><strong>
+                    Pelicula:</strong> <br>"Blade Runner"
+Año: 1982</p>
+                <p><img id="img1" src="/static/img/img1.jpg"></p>
+            </article>  
+            
+        </section>
+    </main>
+    <!--
+    <aside>
+        <h2>doloribus esse quisquam voluptatem eius</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+        <h2>debitis ducimus natus fugit reiciendis dolor?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio ratione non doloribus autem veniam, asperiores! Eaque doloremque, maxime distinctio perferendis ut enim quisquam beatae eius inventore assumenda, molestiae reprehenderit odio.</p>
+    </aside>      
+    -->
+    <footer>
+        <h2>Aldair Alexis Suarez Juarez(4litro)</h2>
+        <h2>Angel Roberto Moreno laines(sato)</h2>
+    
+        <p>&copy; Copyright 2021 por <a href="/">mi</a></p>
+      
+    </footer>
+    </div> <!-- # contenedor -->
+</body>
+</html>

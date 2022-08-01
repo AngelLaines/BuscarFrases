@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<div id="contenedor"> 
+<head>
+    <link rel="stylesheet" href="/static/css/estilosbusqueda.css" type="text/css">  
+    <title>BUSQUEDA</title>
+    <meta charset="utf-8"/>
+	<meta name="descripcion" content="Un formulario sirve para enviar datos a otra página que los recoge para usarlos o almacenarlos."/>
+</head>
+
+<body>
+    <div id="content">
+    <header>
+        <h1>FRASES FAVORITAS</h1>
+        <p><span><strong id="usuario">{{ username }},</strong> estas son tus frases favoritas </span></p>
+    </header>
+    <nav class="navegacion">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/busqueda">Buscar</a></li>
+            <li><a href="/modificar">Modificar Cuenta</a></li> 
+            <li><a href="/logout">Logout</a></li>   
+        </ul>
+    </nav>
+    <main>
+         <section>
+            <article>
+                
+                <form action="" method="post">
+                        {% if listas %}
+                        <p><strong>Tus frases favoritas de libros y Peliculas! :O</strong></p>
+                        <br>      
+                        {% for lista in listas %}
+                        <input type="checkbox" value = {{ loop.index0 }} name="checkbox">
+                        {% for cadena in lista %}
+                        {{ cadena }}<br>
+                        {% endfor %}
+                        {% endfor %}
+                        <input class="btn btn-default" type="submit" value="Eliminar frases seleccionadas">
+                        {% else %}
+                        <p><strong>No cuentas con frases favoritas! :C</strong></p>
+                        {% endif %}
+                </form>
+                    {% if error %}
+                        <p class="error"><strong>Error:</strong> {{ error }}</p>
+                    {% endif %}
+            </article>        
+         </section>
+    </main>
+    <footer>
+       <h2>Aldair Alexis Suárez Juárez(4litro)</h2>
+       <h2>Angel Roberto Moreno laines(sato)</h2>
+        
+       <p>&copy; Copyright 2021 por <a href="/">mi</a></p>
+        
+    </footer>    
+    </div><!-- # contenedor -->
+</body>
+</div>
+</html>

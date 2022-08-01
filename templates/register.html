@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<div id="contenedor">  
+<head>
+    <title>Registro de usuarios</title>
+
+    <link rel="stylesheet" href="/static/css/estiloslogin.css" type="text/css"> 
+
+    <meta charset="utf-8"/>
+	<meta name="descripcion" content="pagina para registrar usuarios nuevos"/>
+</head>
+    
+<body>
+    <div id="content">
+        <header>
+            <h1>REGISTRO</h1>
+            <p><span>Por favor, registrese</span></p>
+        </header>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/login">Login</a></li>    
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <img src="static/img/login.png"
+                    alt="Login">
+                <form action="" method="POST">
+                    
+                    <label for="Email" >Email </label>
+					<input id="Email" type="email" placeholder="Email" name="email" value="{{ request.form.email }}">
+                    <label for="username">Usuario</label>
+                    <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}">
+                    <label for="pass">Password</label>
+                    <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+                    <br>
+                    
+                    
+                    <input class="btn btn-default" type="submit" value="Register">
+                </form>
+                    {% if error %}
+                        <p class="error"><strong>Error:</strong> {{ error }}</p>
+                    {% endif %}
+                </article>        
+         </section>
+        </main>
+    <footer>
+       <h2>Aldair Alexis Suárez Juárez(4litro)</h2>
+       <h2>Angel Roberto Moreno laines(sato)</h2>
+        
+       <p>&copy; Copyright 2021 por <a href="/">mi</a></p>
+        
+    </footer> 
+    </div>
+</body>
+</div>
+</html>

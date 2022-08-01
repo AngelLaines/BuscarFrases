@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<div id="contenedor">
+<head>
+    <title>MODIFICAR CUENTA</title>
+    <link rel="stylesheet" href="/static/css/estiloslogin.css" type="text/css">
+    
+    <meta charset="utf-8"/>
+	<meta name="descripcion" content="pagina para actualizar los usuarios"/>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <h1>MODIFICAR CUENTA</h1>
+            <p><span>cambiar  usuario y password</span></p>
+        </header>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/busqueda">Buscar</a></li>
+                <li><a href="/frasefav">Frases favoritas</a></li>
+                <li><a href="/logout">Logout</a></li>
+                
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <img src="static/img/login.png"
+                alt="Login">
+         <form action="" method="POST">
+                <p>Ingrese su antiguo email,usuario y contraseña</p>
+                <input type="email" placeholder="Email" name="email1" value={{ email1 }}>
+                <input type="text" placeholder="Username" name="username1" value={{ username1 }}>
+                <input type="password" placeholder="Password" name="password1" value={{ password1 }}>
+                <br>
+                <p>Ingrese su nuevo email,usuario y contraseña</p>
+                 <input type="email" placeholder="Email" name="email2" value="{{ request.form.email2 }}">
+                <input type="text" placeholder="Username" name="username2" value="{{ request.form.username2 }}">
+                <input type="password" placeholder="Password" name="password2" value="{{request.form.password2 }}">    
+                <br>
+                
+                <input class="btn btn-default" type="submit" value="Modificar">
+         </form>
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}</p>
+            {% endif %}
+            </section>
+        </main>
+         
+    <footer>
+       <h2>Aldair Alexis Suárez Juárez(4litro)</h2>
+       <h2>Angel Roberto Moreno laines(sato)</h2>
+       <p>&copy; Copyright 2021 por <a href="/">mi</a></p>
+    </footer>  
+    </div>
+    
+</body>
+</div><!-- # contenedor -->
+</html>
