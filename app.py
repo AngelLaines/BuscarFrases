@@ -1,6 +1,6 @@
 # AUTOR:
-#  MORENO LAINES ANGEL ROBERTO
-#  SUÁREZ JUÁREZ ALDAIR ALEXIS
+#  MORENO LAINES ANGEL ROBERTO: Backend
+#  SUÁREZ JUÁREZ ALDAIR ALEXIS: Frontend
 # FECHA: 8 DE MAYO DEL 2021
 # el programa funcion es cribiendo en la terminal "python app.py"
 # este programa cuenta con un indice y para poder buscar frases se debe contar con una cuenta y caso 
